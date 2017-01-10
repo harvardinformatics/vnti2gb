@@ -1,0 +1,726 @@
+@1@
+25|pDD287 mKate2_C1_SEC_3x
+278|GenBank
+27|0
+222|3
+33|10468
+236|0
+237|-11249932
+26|3679
+28|0
+219|0
+220|1
+221|1
+29|0
+30|1
+217|0
+31|0
+32|1
+34|Cloning vector pUC19, complete sequence.
+223|2
+255
+224|UNKNOWN
+50
+256
+224|UNKNOWN
+50
+1001|0
+1006|09-OCT-2015
+1007|Cloning vector pUC19
+1009|REFERENCE   1  (bases 1 to 2686)|  AUTHORS   New England Biolabs.|  TITLE     Direct Submission|  JOURNAL   Submitted (18-OCT-2007) Research Department, New England Biolabs,|            240 County Road, Ipswich, MA 01938, USA
+1014| bla
+1015|Cloning vector pUC19 other sequences; artificial sequences;
+1018|vectors
+45
+51|21
+52|This sequence will be replaced by the homology arm
+53|0
+55|398
+56|1010
+57|0
+281|1
+282|1
+283|1
+284|1
+285|398..1010
+286|/ApEinfo_fwdcolor=#cc9966|/ApEinfo_revcolor=green|/ApEinfo_graphicformat=arrow_data {{0 1 2 0 0 -1} {} 0}|width 5 offset 0
+50
+45
+51|4
+52|SQT-1
+53|0
+55|2750
+56|3771
+57|0
+281|1
+282|1
+283|1
+284|1
+285|join(2750..2890,2938..3771)
+286|/ApEinfo_fwdcolor=#00cccc|/ApEinfo_revcolor=#006666|/ApEinfo_graphicformat=arrow_data {{0 1 2 0 0 -1} {} 0}|width 5 offset 0
+287
+288|0
+289|140
+290
+287
+288|188
+289|833
+290
+50
+45
+51|4
+52|hygR
+53|0
+54|hygromycinR
+55|6080
+56|7105
+57|0
+281|1
+282|1
+283|1
+284|1
+285|6080..7105
+286|/ApEinfo_fwdcolor=#006666|/ApEinfo_revcolor=#006666|/ApEinfo_graphicformat=arrow_data {{0 1 2 0 0 -1} {} 0}|width 5 offset 0
+50
+45
+51|4
+52|Cre
+53|1
+55|4144
+56|5274
+57|0
+281|1
+282|1
+283|1
+284|1
+285|complement(join(4144..4385,4437..4807,4859..5274))
+286|/ApEinfo_fwdcolor=#6699cc|/ApEinfo_revcolor=#006666|/ApEinfo_graphicformat=arrow_data {{0 1 2 0 0 -1} {} 0}|width 5 offset 0
+287
+288|0
+289|241
+290
+287
+288|293
+289|370
+290
+287
+288|715
+289|415
+290
+50
+45
+51|53
+52|RNAII transcript (complementary strand)
+53|1
+54|RNAII transcript (complementary strand)
+55|8649
+56|9201
+57|0
+281|1
+282|1
+283|1
+284|1
+285|complement(8649..9201)
+286|/ApEinfo_fwdcolor=#cccc33|/ApEinfo_revcolor=#999933|/ApEinfo_graphicformat=arrow_data {{0 1 2 0 0 -1} {} 0}|width 5 offset 0
+50
+45
+51|33
+52|pMB1 origin of replication (counter-clockwise) (RN
+53|1
+54|pMB1 origin of replication (counter-clockwise) (RNAII -35 to RNA/DNA switch point)
+55|8649
+56|9237
+57|0
+281|1
+282|1
+283|1
+284|1
+285|complement(8649..9237)
+286|/ApEinfo_fwdcolor=pink|/ApEinfo_revcolor=pink|/ApEinfo_graphicformat=arrow_data {{0 1 2 0 0 -1} {} 0}|width 5 offset 0
+50
+45
+51|53
+52|RNAI transcript
+53|0
+54|RNAI transcript
+55|9091
+56|9198
+57|0
+281|1
+282|1
+283|1
+284|1
+285|9091..9198
+286|/ApEinfo_fwdcolor=#cccc33|/ApEinfo_revcolor=#999933|/ApEinfo_graphicformat=arrow_data {{0 1 2 0 0 -1} {} 0}|width 5 offset 0
+50
+45
+51|21
+52|spacer
+53|0
+55|7523
+56|7534
+57|0
+281|1
+282|1
+283|1
+284|1
+285|7523..7534
+286|/ApEinfo_fwdcolor=#cccccc|/ApEinfo_revcolor=green|/ApEinfo_graphicformat=arrow_data {{0 1 2 0 0 -1} {} 0}|width 5 offset 0
+50
+45
+51|31
+52|Myc Tag
+53|0
+55|7595
+56|7624
+57|0
+281|1
+282|1
+283|1
+284|1
+285|7595..7624
+286|/ApEinfo_fwdcolor=#cc33cc|/ApEinfo_revcolor=green|/ApEinfo_graphicformat=arrow_data {{0 1 2 0 0 -1} {} 0}|width 5 offset 0
+50
+45
+51|15
+52|intron
+53|0
+55|1959
+56|1964
+57|0
+281|1
+282|1
+283|1
+284|1
+285|1959..1964
+286|/ApEinfo_fwdcolor=#cc66ff|/ApEinfo_revcolor=#ff00ff|/ApEinfo_graphicformat=arrow_data {{0 1 2 0 0 -1} {} 0}|width 5 offset 0
+50
+45
+51|4
+52|AmpR
+53|1
+55|9411
+56|10070
+57|0
+281|1
+282|1
+283|1
+284|1
+285|complement(9411..10070)
+286|/ApEinfo_fwdcolor=yellow|/ApEinfo_revcolor=yellow|/ApEinfo_graphicformat=arrow_data {{0 1 2 0 0 -1} {} 0}|width 5 offset 0
+50
+45
+51|4
+52|mKate2
+53|0
+55|1038
+56|1886
+57|0
+281|1
+282|1
+283|1
+284|1
+285|join(1038..1241,1293..1451,1503..1667,1719..1886)
+286|/ApEinfo_fwdcolor=#993333|/ApEinfo_revcolor=pink|/ApEinfo_graphicformat=arrow_data {{0 1 2 0 0 -1} {} 0}|width 5 offset 0
+287
+288|0
+289|203
+290
+287
+288|255
+289|158
+290
+287
+288|465
+289|164
+290
+287
+288|681
+289|167
+290
+50
+45
+51|33
+52|ColE1 origin
+53|1
+55|8631
+56|9313
+57|0
+281|1
+282|1
+283|1
+284|1
+285|complement(8631..9313)
+286|/ApEinfo_fwdcolor=gray50|/ApEinfo_revcolor=gray50|/ApEinfo_graphicformat=arrow_data {{0 1 2 0 0 -1} {} 0}|width 5 offset 0
+50
+45
+51|15
+52|intron(1)
+53|0
+55|1914
+56|1924
+57|0
+281|1
+282|1
+283|1
+284|1
+285|1914..1924
+286|/ApEinfo_label=intron|/ApEinfo_fwdcolor=#cc66ff|/ApEinfo_revcolor=#ff00ff|/ApEinfo_graphicformat=arrow_data {{0 1 2 0 0 -1} {} 0}|width 5 offset 0
+50
+45
+51|31
+52|Myc Tag(1)
+53|0
+55|7535
+56|7564
+57|0
+281|1
+282|1
+283|1
+284|1
+285|7535..7564
+286|/ApEinfo_label=Myc Tag|/ApEinfo_fwdcolor=#ff99ff|/ApEinfo_revcolor=green|/ApEinfo_graphicformat=arrow_data {{0 1 2 0 0 -1} {} 0}|width 5 offset 0
+50
+45
+51|48
+52|RNAI promoter (clockwise); TTGAAG
+53|0
+54|RNAI promoter (clockwise); TTGAAG
+55|9055
+56|9060
+57|0
+281|1
+282|1
+283|1
+284|1
+285|9055..9060
+286|/ApEinfo_fwdcolor=pink|/ApEinfo_revcolor=pink|/ApEinfo_graphicformat=arrow_data {{0 1 2 0 0 -1} {} 0}|width 5 offset 0
+50
+45
+51|47
+52|RNAI promoter (clockwise); GCTACA
+53|0
+54|RNAI promoter (clockwise); GCTACA
+55|9077
+56|9082
+57|0
+281|1
+282|1
+283|1
+284|1
+285|9077..9082
+286|/ApEinfo_fwdcolor=pink|/ApEinfo_revcolor=pink|/ApEinfo_graphicformat=arrow_data {{0 1 2 0 0 -1} {} 0}|width 5 offset 0
+50
+45
+51|48
+52|RNAII promoter (counter-clockwise); TTGAGA
+53|1
+54|RNAII promoter (counter-clockwise); TTGAGA
+55|9232
+56|9237
+57|0
+281|1
+282|1
+283|1
+284|1
+285|complement(9232..9237)
+286|/ApEinfo_fwdcolor=pink|/ApEinfo_revcolor=pink|/ApEinfo_graphicformat=arrow_data {{0 1 2 0 0 -1} {} 0}|width 5 offset 0
+50
+45
+51|47
+52|RNAII promoter (counter-clockwise); CGTAAT
+53|1
+54|RNAII promoter (counter-clockwise); CGTAAT
+55|9211
+56|9216
+57|0
+281|1
+282|1
+283|1
+284|1
+285|complement(9211..9216)
+286|/ApEinfo_fwdcolor=pink|/ApEinfo_revcolor=pink|/ApEinfo_graphicformat=arrow_data {{0 1 2 0 0 -1} {} 0}|width 5 offset 0
+50
+45
+51|47
+52|bla promoter (counter-clockwise); GAGACA
+53|1
+54|bla promoter (counter-clockwise); GAGACA
+55|10312
+56|10317
+57|0
+281|1
+282|1
+283|1
+284|1
+285|complement(10312..10317)
+286|/ApEinfo_fwdcolor=pink|/ApEinfo_revcolor=pink|/ApEinfo_graphicformat=arrow_data {{0 1 2 0 0 -1} {} 0}|width 5 offset 0
+50
+45
+51|85
+52|e1350
+53|0
+55|3001
+56|3001
+57|0
+281|1
+282|1
+283|1
+284|1
+285|3001..3001
+286|/ApEinfo_fwdcolor=#ff0000|/ApEinfo_revcolor=#ff0000|/ApEinfo_graphicformat=arrow_data {{0 1 2 0 0 -1} {} 0}|width 5 offset 0
+50
+45
+51|4
+52|ccdB
+53|0
+55|661
+56|966
+57|0
+281|1
+282|1
+283|1
+284|1
+285|661..966
+286|/ApEinfo_fwdcolor=#ffff00|/ApEinfo_revcolor=#006666|/ApEinfo_graphicformat=arrow_data {{0 1 2 0 0 -1} {} 0}|width 5 offset 0
+50
+45
+51|52
+52|sqt-1 5'UTR
+53|0
+55|2664
+56|2749
+57|0
+281|1
+282|1
+283|1
+284|1
+285|join(2664..2691,2748..2749)
+286|/ApEinfo_fwdcolor=#ccffcc|/ApEinfo_revcolor=green|/ApEinfo_graphicformat=arrow_data {{0 1 2 0 0 -1} {} 0}|width 5 offset 0
+287
+288|0
+289|27
+290
+287
+288|84
+289|1
+290
+50
+45
+51|4
+52|beta-lactamase
+53|1
+54|ampR (confers resistance to ampicillin)
+55|9408
+56|10268
+57|0
+281|1
+282|1
+283|1
+284|1
+285|complement(9408..10268)
+286|/gene="bla"|/codon_start=1|/product="beta-lactamase"|/ApEinfo_fwdcolor=#00cccc|/ApEinfo_revcolor=#006666|/ApEinfo_graphicformat=arrow_data {{0 1 2 0 0 -1} {} 0}|width 5 offset 0
+50
+45
+51|21
+52|spacer(1)
+53|0
+55|1965
+56|1967
+57|0
+281|1
+282|1
+283|1
+284|1
+285|1965..1967
+286|/ApEinfo_label=spacer|/ApEinfo_fwdcolor=#cccccc|/ApEinfo_revcolor=green|/ApEinfo_graphicformat=arrow_data {{0 1 2 0 0 -1} {} 0}|width 5 offset 0
+50
+45
+51|31
+52|Myc Tag(2)
+53|0
+55|7565
+56|7594
+57|0
+281|1
+282|1
+283|1
+284|1
+285|7565..7594
+286|/ApEinfo_label=Myc Tag|/ApEinfo_fwdcolor=#cc66cc|/ApEinfo_revcolor=green|/ApEinfo_graphicformat=arrow_data {{0 1 2 0 0 -1} {} 0}|width 5 offset 0
+50
+45
+51|50
+52|sqt-1 3'UTR
+53|0
+55|3772
+56|3808
+57|0
+281|1
+282|1
+283|1
+284|1
+285|3772..3808
+286|/ApEinfo_fwdcolor=#cc3333|/ApEinfo_revcolor=#cc3333|/ApEinfo_graphicformat=arrow_data {{0 1 2 0 0 -1} {} 0}|width 5 offset 0
+50
+45
+51|43
+52|let-858 Terminator
+53|0
+55|1998
+56|2379
+57|0
+281|1
+282|1
+283|1
+284|1
+285|1998..2379
+286|/ApEinfo_fwdcolor=#cc0000|/ApEinfo_revcolor=#cc0000|/ApEinfo_graphicformat=arrow_data {{0 1 2 0 0 -1} {} 0}|width 5 offset 0
+50
+45
+51|30
+52|hsp16-41 promoter
+53|1
+55|5275
+56|5674
+57|0
+281|1
+282|1
+283|1
+284|1
+285|complement(5275..5674)
+286|/ApEinfo_fwdcolor=#0080c0|/ApEinfo_revcolor=#0080c0|/ApEinfo_graphicformat=arrow_data {{0 1 2 0 0 -1} {} 0}|width 5 offset 0
+50
+45
+51|48
+52|bla promoter (counter-clockwise); TTCAAA
+53|1
+54|bla promoter (counter-clockwise); TTCAAA
+55|10333
+56|10338
+57|0
+281|1
+282|1
+283|1
+284|1
+285|complement(10333..10338)
+286|/ApEinfo_fwdcolor=pink|/ApEinfo_revcolor=pink|/ApEinfo_graphicformat=arrow_data {{0 1 2 0 0 -1} {} 0}|width 5 offset 0
+50
+45
+51|50
+52|unc-54 3'UTR
+53|0
+55|7131
+56|7482
+57|0
+281|1
+282|1
+283|1
+284|1
+285|7131..7482
+286|/ApEinfo_fwdcolor=#990000|/ApEinfo_revcolor=#cc0000|/ApEinfo_graphicformat=arrow_data {{0 1 2 0 0 -1} {} 0}|width 5 offset 0
+50
+45
+51|50
+52|tbb-2 3'UTR
+53|1
+55|3809
+56|4140
+57|0
+281|1
+282|1
+283|1
+284|1
+285|complement(3809..4140)
+286|/ApEinfo_fwdcolor=#cc3333|/ApEinfo_revcolor=#993333|/ApEinfo_graphicformat=arrow_data {{0 1 2 0 0 -1} {} 0}|width 5 offset 0
+50
+45
+51|87
+52|TEV site
+53|0
+55|1887
+56|1907
+57|0
+281|1
+282|1
+283|1
+284|1
+285|1887..1907
+286|/ApEinfo_fwdcolor=#ff6600|/ApEinfo_revcolor=#ff6600|/ApEinfo_graphicformat=arrow_data {{0 1 2 0 0 -1} {} 0}|width 5 offset 0
+50
+45
+51|30
+52|Psqt1
+53|0
+55|2380
+56|2749
+57|0
+281|1
+282|1
+283|1
+284|1
+285|2380..2749
+286|/ApEinfo_fwdcolor=#33cc00|/ApEinfo_revcolor=#33cc00|/ApEinfo_graphicformat=arrow_data {{0 1 2 0 0 -1} {} 0}|width 5 offset 0
+50
+45
+51|15
+52|intron(2)
+53|0
+55|7517
+56|7522
+57|0
+281|1
+282|1
+283|1
+284|1
+285|7517..7522
+286|/ApEinfo_label=intron|/ApEinfo_fwdcolor=#cc66ff|/ApEinfo_revcolor=#ff00ff|/ApEinfo_graphicformat=arrow_data {{0 1 2 0 0 -1} {} 0}|width 5 offset 0
+50
+45
+51|30
+52|Prps-0
+53|0
+54|Prps-0 /ApEinfo_fwdcolor=pink  /ApEinfo_revcolor=pink; /ApEinfo_fwdcolor=pink;
+55|5675
+56|6037
+57|0
+281|1
+282|1
+283|1
+284|1
+285|5675..6037
+286|/ApEinfo_revcolor=pink; /ApEinfo_graphicformat=arrow_data|{{0 1 2 0 0 -1} {} 0} width 5 offset 0"|/ApEinfo_fwdcolor=#339933|/ApEinfo_revcolor=#339933|/ApEinfo_graphicformat=arrow_data {{0 1 2 0 0 -1} {} 0}|width 5 offset 0
+50
+45
+51|88
+52|Flexible Linker (will be deleted if ClaI is used)
+53|0
+55|1011
+56|1037
+57|0
+281|1
+282|1
+283|1
+284|1
+285|1011..1037
+286|/ApEinfo_fwdcolor=#999999|/ApEinfo_revcolor=green|/ApEinfo_graphicformat=arrow_data {{0 1 2 0 0 -1} {} 0}|width 5 offset 0
+50
+45
+51|21
+52|This sequence will be deleted if ClaI is used
+53|0
+55|8232
+56|8238
+57|0
+281|1
+282|1
+283|1
+284|1
+285|8232..8238
+286|/ApEinfo_fwdcolor=#ffcc99|/ApEinfo_revcolor=green|/ApEinfo_graphicformat=arrow_data {{0 1 2 0 0 -1} {} 0}|width 5 offset 0
+50
+45
+51|21
+52|This sequence will be replaced by the homology
+53|0
+55|7625
+56|8231
+57|0
+281|1
+282|1
+283|1
+284|1
+285|7625..8231
+286|arm(1)|/ApEinfo_label=This sequence will be replaced by the|homology arm|/ApEinfo_fwdcolor=#cc9966|/ApEinfo_revcolor=green|/ApEinfo_graphicformat=arrow_data {{0 1 2 0 0 -1} {} 0}|width 5 offset 0
+50
+45
+51|4
+52|ccdB(1)
+53|1
+55|7669
+56|7974
+57|0
+281|1
+282|1
+283|1
+284|1
+285|complement(7669..7974)
+286|/ApEinfo_label=ccdB|/ApEinfo_fwdcolor=#00cccc|/ApEinfo_revcolor=#ffff00|/ApEinfo_graphicformat=arrow_data {{0 1 2 0 0 -1} {} 0}|width 5 offset 0
+50
+45
+51|21
+52|lox2272
+53|0
+55|7483
+56|7516
+57|0
+281|1
+282|1
+283|1
+284|1
+285|7483..7516
+286|/ApEinfo_fwdcolor=#ff8000|/ApEinfo_revcolor=#ff8000|/ApEinfo_graphicformat=arrow_data {{0 1 2 0 0 -1} {} 0}|width 5 offset 0
+50
+45
+51|21
+52|lox2272(1)
+53|0
+55|1925
+56|1958
+57|0
+281|1
+282|1
+283|1
+284|1
+285|1925..1958
+286|/ApEinfo_label=lox2272|/ApEinfo_fwdcolor=#ff8000|/ApEinfo_revcolor=#ff8000|/ApEinfo_graphicformat=arrow_data {{0 1 2 0 0 -1} {} 0}|width 5 offset 0
+50
+45
+51|31
+52|HA
+53|0
+55|1968
+56|1994
+57|0
+281|1
+282|1
+283|1
+284|1
+285|1968..1994
+286|/ApEinfo_fwdcolor=#6600ff|/ApEinfo_revcolor=green|/ApEinfo_graphicformat=arrow_data {{0 1 2 0 0 -1} {} 0}|width 5 offset 0
+50
+45
+51|28
+52|M13-rev
+53|1
+55|8243
+56|8263
+57|0
+281|1
+282|1
+283|1
+284|1
+285|complement(8243..8263)
+286|/ApEinfo_fwdcolor=cyan|/ApEinfo_revcolor=green|/ApEinfo_graphicformat=arrow_data {{0 1 2 0 0 -1} {} 0}|width 5 offset 0
+50
+45
+51|28
+52|M13-fwd
+53|0
+55|378
+56|395
+57|0
+281|1
+282|1
+283|1
+284|1
+285|378..395
+286|/ApEinfo_fwdcolor=cyan|/ApEinfo_revcolor=green|/ApEinfo_graphicformat=arrow_data {{0 1 2 0 0 -1} {} 0}|width 5 offset 0
+50
+205
+37|0
+38|0
+39|0
+40|0
+1024|-1
+24
