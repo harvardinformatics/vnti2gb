@@ -331,21 +331,24 @@ USAGE
                 seqfile = molfile.replace('mol','seq')
                 commentfile = molfile.replace('mol','cmn')
                 if seqfile in seqfiles:
-                    if commentfile in commentfiles:
-                        gbstr = makeGenBankReport(
-                            os.path.join(moldatapath,molfile),
-                            os.path.join(seqdatapath,seqfile),
-                            os.path.join(commentdatapath,commentfile),
-                        )
-                    else:
-                        gbstr = makeGenBankReport(
-                            os.path.join(moldatapath,molfile),
-                            os.path.join(seqdatapath,seqfile)
-                        )
-                    gbpath = os.path.join(outputpath,molfile.replace('mol','gb'))
-                    with open(gbpath,'w') as gb:
-                        gb.write(gbstr)
-                    logger.debug('Wrote %s' % gbpath)
+                    try:
+                        if commentfile in commentfiles:
+                            gbstr = makeGenBankReport(
+                                os.path.join(moldatapath,molfile),
+                                os.path.join(seqdatapath,seqfile),
+                                os.path.join(commentdatapath,commentfile),
+                            )
+                        else:
+                            gbstr = makeGenBankReport(
+                                os.path.join(moldatapath,molfile),
+                                os.path.join(seqdatapath,seqfile)
+                            )
+                        gbpath = os.path.join(outputpath,molfile.replace('mol','gb'))
+                        with open(gbpath,'w') as gb:
+                            gb.write(gbstr)
+                        logger.debug('Wrote %s' % gbpath)
+                    except Exception as e:
+                        logger.info('Unable to make report for mol file %s' % molfile)
                 else:
                     logger.info('Unable to find seq file %s, to match mol file %s' % (seqfile,molfile))
 
