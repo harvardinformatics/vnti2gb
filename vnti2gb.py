@@ -106,11 +106,14 @@ fkeys = {
     '102': 'gap',
 }
 
+# Reverse the keys so that I can assign /vntifkey
+fkeyrev = dict((v,k) for k,v in fkeys.iteritems())
+
 # Pad for beginning of feature tags
 tagpadding = 21 * ' '
 
 
-def makeGenBankReport(molfile,seqfile):
+def makeGenBankReport(molfile,seqfile,commentfile=None):
     rpt = '''{LOCUS}
 {DEFINITION}
 {SOURCE}
@@ -125,7 +128,7 @@ def makeGenBankReport(molfile,seqfile):
     with open(seqfile,'r') as f:
         seq = ''.join(f.readlines())
     if seq.strip() == '':
-        raise Exception('No sequence data in %s' % seqfile)
+        raise UserException('No sequence data in %s' % seqfile)
     data['SEQ'] = seq
     data['FEATURES'] = []
 
@@ -134,7 +137,19 @@ def makeGenBankReport(molfile,seqfile):
     with open(molfile,'r') as f:
         lines = f.readlines()
     if len(lines) == 0:
-        raise Exception('No lines in mol file %s' % molfile)
+        raise UserException('No lines in mol file %s' % molfile)
+
+    # Get the comment lines
+    commentlines = []
+    if commentfile:
+        with open(commentfile,'r') as f:
+            for line in f:
+                parts = line.split('|')
+                if len(parts) > 1:
+                    commentlines.append(parts[1].strip())
+        if len(commentlines) == 0:
+            raise UserException('No lines in comment file %s' % commentfile)
+
 
 
     featuredata = None
@@ -199,11 +214,14 @@ def makeGenBankReport(molfile,seqfile):
 
     # COMMENT section
     COMMENT = ''
+    if commentlines:
+        commentjoin = '\n' + ' ' * 12
+        COMMENT = '{LABEL:12}{COMMENTS}\n'.format(LABEL='COMMENT',COMMENTS=commentjoin.join(commentlines))
 
     # Features
     FEATURES = ''
     if len(data['FEATURES']) > 0:
-        FEATURES = 'FEATURES' + 1 * ' ' + 'Location/Qualifiers\n'
+        FEATURES = 'FEATURES' + 13 * ' ' + 'Location/Qualifiers\n'
     for feature in data['FEATURES']:
         if 'FKEY' not in feature or 'LOCSTR' not in feature:
             logger.info('Unable to create feature due to missing key or location string')
@@ -217,15 +235,24 @@ def makeGenBankReport(molfile,seqfile):
                 featurestr += tagpadding + '/label="%s"\n' % feature['LABEL']
             if 'NOTE' in feature:
                 featurestr += tagpadding + '/note="%s"\n' % feature['NOTE']
+            featurestr += tagpadding + '/vntifkey="%s"\n' % fkeyrev[feature['FKEY']]
         FEATURES += featurestr
 
 
     # The sequence
-    SEQUENCE = ''
-    n = 60
-    seqlines = [data['SEQ'][i:i + n] for i in range(0, len(data['SEQ']), n)]
+    # Get counts
+    seqstr = data['SEQ'].lower()
+    counts = dict((b,seqstr.count(b)) for b in ['a','c','g','t'])
+    SEQUENCE = 'BASE COUNT     %d a      %d c      %d g      %d t\n' % (counts['a'], counts['c'], counts['g'], counts['t'])
+    SEQUENCE += 'ORIGIN\n'
+
+    # Split into 60 char lines
+    seqlines = [seqstr[i:i + 60] for i in range(0, len(seqstr), 60)]
     for i, line in enumerate(seqlines):
-        print '%d, %s' % (n * i + 1,line)
+        # split into 10 char chunks
+        chunks = [line[j:j + 10] for j in range(0, 60, 10)]
+        SEQUENCE += '{POS:>9} {SEQ}\n'.format(POS=str(i * 60 + 1), SEQ=' '.join(chunks))
+
     
 
     return rpt.format(
@@ -289,22 +316,35 @@ USAGE
         # Read file names from MolData, match up Seq file and process
         moldatapath = os.path.join(vntidbpath,'MolData')
         seqdatapath = os.path.join(moldatapath,'Seq')
+        commentdatapath = os.path.join(moldatapath,'Comment')
         molfiles = os.listdir(moldatapath)
         seqfiles = os.listdir(seqdatapath)
+        commentfiles = os.listdir(commentdatapath)
+
         logger.info('%d files in MolData dir %s' % (len(molfiles),moldatapath))
         logger.info('%d files in Seq dir %s' % (len(seqfiles),seqdatapath))
+        logger.info('%d files in Comment dir %s' % (len(commentfiles),commentdatapath))
 
         for molfile in molfiles:
             if os.path.isfile(os.path.join(moldatapath,molfile)):
                 logger.debug('Processing mol file %s' % molfile)
                 seqfile = molfile.replace('mol','seq')
+                commentfile = molfile.replace('mol','cmn')
                 if seqfile in seqfiles:
-                    logger.debug('Found seq file %s' % seqfile)
-                    gbstr = makeGenBankReport(os.path.join(moldatapath,molfile), os.path.join(seqdatapath,seqfile))
+                    if commentfile in commentfiles:
+                        gbstr = makeGenBankReport(
+                            os.path.join(moldatapath,molfile),
+                            os.path.join(seqdatapath,seqfile),
+                            os.path.join(commentdatapath,commentfile),
+                        )
+                    else:
+                        gbstr = makeGenBankReport(
+                            os.path.join(moldatapath,molfile),
+                            os.path.join(seqdatapath,seqfile)
+                        )
                     gbpath = os.path.join(outputpath,molfile.replace('mol','gb'))
                     with open(gbpath,'w') as gb:
                         gb.write(gbstr)
-                        gb.write('\n')
                     logger.debug('Wrote %s' % gbpath)
                 else:
                     logger.info('Unable to find seq file %s, to match mol file %s' % (seqfile,molfile))
