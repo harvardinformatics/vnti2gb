@@ -45,6 +45,8 @@ fregexes = {
     'FKEY'          : re.compile(r'^51\|(.*)'),
     'NOTE'          : re.compile(r'^54\|(.*)'),
     'TAGS'          : re.compile(r'^286\|(.*)'),
+    'START'         : re.compile(r'^55\|(.*)'),
+    'END'           : re.compile(r'^56\|(.*)'),
 }
 # Feature keys
 fkeys = {
@@ -226,10 +228,21 @@ def makeGenBankReport(molfile,seqfile,commentfile=None):
     if len(data['FEATURES']) > 0:
         FEATURES = 'FEATURES' + 13 * ' ' + 'Location/Qualifiers\n'
     for feature in data['FEATURES']:
-        if 'FKEY' not in feature or 'LOCSTR' not in feature:
+        if 'FKEY' not in feature:
             logger.info('Unable to create feature due to missing key or location string')
+        elif 'LOCSTR' not in feature and 'START' not in feature and 'END' not in feature:
+            logger.info('Unable to create feature due to missing location information')
         else:
-            featurestr = '     {FKEY:16}{LOCSTR}\n'.format(FKEY=feature['FKEY'],LOCSTR=feature['LOCSTR'])
+            # Setup location string
+            locstr = ''
+            if 'LOCSTR' in feature:
+                locstr = feature['LOCSTR']
+            elif 'START' in feature and 'END' in feature:
+                locstr = '{START}..{END}'.format(START=feature['START'],END=feature['END'])
+            else:
+                raise Exception('Not sure how you got here')
+
+            featurestr = '     {FKEY:16}{LOCSTR}\n'.format(FKEY=feature['FKEY'],LOCSTR=locstr)
             if 'TAGS' in feature:
                 tags = feature['TAGS'].split('|')
                 tagjoin = '\n' + tagpadding
