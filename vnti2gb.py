@@ -87,6 +87,7 @@ fkeys = {
     '52': "5'UTR",
     '53': 'misc_RNA',
     '54': 'mRNA',
+    '56': 'scRNA',
     '58': 'rRNA',
     '59': 'tRNA',
     '60': 'gene',
