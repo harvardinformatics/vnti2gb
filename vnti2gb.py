@@ -193,7 +193,6 @@ def makeGenBankReport(molfile,seqfile,commentfile=None):
     locusstart = '{LABEL:12}{LOCUS}'.format(LABEL='LOCUS',LOCUS=data['LOCUS'])
     locusextra = '{LENGTH} bp    DNA    circular    {DATE}'.format(LENGTH=data['LENGTH'],DATE='01-JAN-2017')
     pad = 72 - (len(locusstart) + len(locusextra))
-    print "pad is %d" % pad
     if pad < 1:
         pad = 1
     LOCUS = locusstart + pad * ' ' + locusextra
