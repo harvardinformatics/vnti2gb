@@ -124,6 +124,9 @@ def makeGenBankReport(molfile,seqfile,commentfile=None):
 {SEQUENCE}
 '''
     data = {}
+    data['DEFINITION'] = ''
+    data['SOURCE'] = ''
+    data['ORGANISM1'] = ''
 
     # Get the sequence
     with open(seqfile,'r') as f:
