@@ -239,7 +239,7 @@ def makeGenBankReport(molfile,seqfile,commentfile=None):
             if 'NOTE' in feature:
                 featurestr += tagpadding + '/note="%s"\n' % feature['NOTE']
             featurestr += tagpadding + '/vntifkey="%s"\n' % fkeyrev[feature['FKEY']]
-        FEATURES += featurestr
+            FEATURES += featurestr
 
 
     # The sequence
