@@ -88,6 +88,7 @@ fkeys = {
     '58': 'rRNA',
     '59': 'tRNA',
     '60': 'gene',
+    '61': 'exon',
     '62': 'exon',
     '81': 'allele',
     '83': 'misc_difference',
