@@ -107,6 +107,7 @@ fkeys = {
     '98': 'source',
     '99': 'unsure',
     '102': 'gap',
+    '274': 'overhang',
 }
 
 # Reverse the keys so that I can assign /vntifkey
@@ -229,7 +230,7 @@ def makeGenBankReport(molfile,seqfile,commentfile=None):
         FEATURES = 'FEATURES' + 13 * ' ' + 'Location/Qualifiers\n'
     for feature in data['FEATURES']:
         if 'FKEY' not in feature:
-            logger.info('Unable to create feature due to missing key or location string')
+            logger.info('Unable to create feature due to missing key')
         elif 'LOCSTR' not in feature and 'START' not in feature and 'END' not in feature:
             logger.info('Unable to create feature due to missing location information')
         else:
