@@ -351,7 +351,7 @@ USAGE
                             gb.write(gbstr)
                         logger.debug('Wrote %s' % gbpath)
                     except Exception as e:
-                        logger.info('Unable to make report for mol file %s' % molfile)
+                        logger.info('Unable to make report for mol file %s: %s' % (molfile,str(e)))
                 else:
                     logger.info('Unable to find seq file %s, to match mol file %s' % (seqfile,molfile))
 
